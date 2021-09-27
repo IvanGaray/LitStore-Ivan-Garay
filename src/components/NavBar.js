@@ -3,25 +3,28 @@ import React from 'react'
 
 const NavBar = () => {
     return (
+        <div>
+            <div className="brand">LitStore</div>
         <nav className="NavBar">
         
-  
-  <div class="collapse navbar-collapse">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Inicio</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Productos</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Servicios</a>
-      </li>
-    </ul>
-    
-  </div>
 
-        </nav>
+            <div class="">
+            
+                <ul class="">
+                    <li class="">
+                        <a class="" href="#">Inicio</a>
+                    </li>
+                    <li class="">
+                        <a class="" href="#">Productos</a>
+                    </li>
+                    <li class="">
+                        <a class="" href="#">Servicios</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav></div>
     )
 }
 

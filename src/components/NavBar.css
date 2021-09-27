@@ -16,3 +16,12 @@ a{
     color: rgb(199, 199, 199);
     
 }
+
+.brand{
+    background-color: rgb(143, 0, 0);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    max-height: 3em;
+    color: rgb(0, 0, 0);
+    font-size:x-large;
+    border-radius: 3px;
+}
