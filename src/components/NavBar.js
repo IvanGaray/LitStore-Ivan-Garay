@@ -1,10 +1,13 @@
 import "./NavBar.css";
 import React from 'react'
+import logo from '../assets/logo.png'
 
 const NavBar = () => {
     return (
         <div>
-            <div className="brand">LitStore</div>
+            <img src={logo} width='70px' height='50px'/>
+           <div className="brand">LitStore</div>
+            
         <nav className="NavBar">
         
 
@@ -24,7 +27,9 @@ const NavBar = () => {
 
             </div>
 
-        </nav></div>
+        </nav>
+        
+        </div>
     )
 }
 
