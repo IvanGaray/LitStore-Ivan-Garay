@@ -7,14 +7,14 @@ const NavBar = () => {
     return (
 
         <div>
-            
-            
+
+
             <nav className="NavBar">
-            <CartWidget/>
-            <img className='logo' src={logo} width='70px' height='50px'/>
+                <CartWidget />
+                <img className='logo' src={logo} width='70px' height='50px' />
 
                 <div className="">
-                
+
                     <ul className="">
                         <li className="">
                             <a className="" href="#">Inicio</a>
@@ -30,7 +30,7 @@ const NavBar = () => {
                 </div>
 
             </nav>
-        
+
         </div>
     )
 }

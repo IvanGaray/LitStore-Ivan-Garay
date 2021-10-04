@@ -1,0 +1,21 @@
+li>a{
+    color: blanchedalmond;
+    
+}
+li>a:hover{
+    color: rgb(104, 104, 104);
+}
+.itemCount{
+    
+    justify-content: center;
+    color: blanchedalmond;
+    flex-direction: column;
+}
+.counter{
+    justify-content: center;
+    display: flex;
+    border-width: 5px;
+    border-radius: 1px;
+    border-color: black;
+}
+
