@@ -22,6 +22,10 @@ const ItemCount = ({ initial, stock }) => {
             setCounter(counter - 1);
         }
     }
+    const onAdd=()=>{
+        
+        console.log(`Se ha agregado `+ counter)
+    }
 
     return (
         <div className='itemCount'>
@@ -31,7 +35,7 @@ const ItemCount = ({ initial, stock }) => {
             <div className="counter">
                 <p>{counter}</p>
             </div>
-            <button className="btn btn-dark btn-lg" >Agregar al carrito</button>
+            <button className="btn btn-dark btn-lg" onClick={onAdd}>Agregar al carrito</button>
 
             <p>Stock Disponible: {stock} </p>
         </div>
