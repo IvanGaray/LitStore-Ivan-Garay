@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1001,
+        "title": "Metal Gear Solid: Peace Walker (PSP)",
+        "description": "Diez años después de la operación Snake Eater, y 4 años después de los eventos de San Jerónimo de Portable Ops, Naked Snake (quien mantiene el título de Big Boss), vive ahora en Costa Rica, Puerto Limón, con su propia empresa de mercenarios llamada Millitaires Sans Frontières o MSF.",
+        "price": 30058,
+        "pictureUrl": "https://s2.gaming-cdn.com/images/products/7900/orig/juego-steam-metal-gear-solid-remake-cover.jpg",
+        "stock": 27
+    },
+    {
+        "id": 1002,
+        "title": "Metal Gear Solid (Playstation 1)",
+        "description": "FOXHOUND, una unidad genéticamente mejorada de fuerzas especiales,​ armó un levantamiento armado en una isla remota ubicada en el archipiélago Fox de Alaska.​ Esta isla, con nombre en código Shadow Moses, es el sitio de una instalación de almacenamiento de armas nucleares.36​34​ La unidad terrorista, encabezada por un mercenario conocido como Liquid Snake, tomó el control de un tanque bípedo con capacidad nuclear llamado Metal Gear REX, y amenazan al Gobierno de los Estados Unidos con una represalia nuclear, si no reciben en menos de 24 horas los restos del soldado legendario Big Boss.",
+        "price": 2500,
+        "pictureUrl": "https://media.vandal.net/ivandal/1200x630/181/metal-gear-solid-201961220192328_1.jpg",
+        "stock": 70
+    },
+    {
+        "id": 1003,
+        "title": "Metal Gear Solid V: Ground Zeroes (PC)",
+        "description": "Primera parte de la aventura de sígilo por primera vez en mundo abierto en la saga Metal Gear",
+        "price": 17000,
+        "pictureUrl": "https://media.vandal.net/ivandal/1200x630/22733/metal-gear-solid-v-ground-zeroes-2014317121650_1.jpg",
+        "stock": 8
+    },
+    {
+        "id": 1004,
+        "title": "Metal Gear Solid V: The Phantom Pain (PC)",
+        "description": "Segunda parte de la aventura de sígilo por primera vez en el mundo abierto de la saga Metal Gear",
+        "price": 3250,
+        "pictureUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202010/0205/dyvo9eGUf7WTZx49eTpQyDuL.png",
+        "stock": 5
+    }
+]

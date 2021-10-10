@@ -1,38 +1,35 @@
 import "./NavBar.css";
-import React from 'react'
-import logo from '../assets/logo.png'
+import {Navbar,Container,Nav} from 'react-bootstrap';
+import logo from '../assets/logos.png'
 import CartWidget from '../components/CartWidget/CartWidget'
 
-const NavBar = () => {
+const navBar = () => {
     return (
 
         <div>
 
 
-            <nav className="NavBar">
-                <CartWidget />
-                <img className='logo' src={logo} width='70px' height='50px' />
+<Navbar bg="dark" variant="dark">
+    <Container>
+    <img
+        src={logo}
+        width="60"
+        height="50"
+        className="d-inline-block align-top"
+        alt="React Bootstrap logo"
+      />
+    <Navbar.Brand href="#home">LitStore</Navbar.Brand>
+    <Nav className="me-auto">
+      <Nav.Link href="#home">Home</Nav.Link>
+      <Nav.Link href="#features">Features</Nav.Link>
+      <Nav.Link href="#pricing">Pricing</Nav.Link>
+    </Nav>
+    </Container>
+  </Navbar>
 
-                <div className="">
-
-                    <ul className="">
-                        <li className="">
-                            <a className="" href="#">Inicio</a>
-                        </li>
-                        <li className="">
-                            <a className="" href="#">Productos</a>
-                        </li>
-                        <li className="">
-                            <a className="" href="#">Servicios</a>
-                        </li>
-                    </ul>
-
-                </div>
-
-            </nav>
 
         </div>
     )
 }
 
-export default NavBar
+export default navBar
