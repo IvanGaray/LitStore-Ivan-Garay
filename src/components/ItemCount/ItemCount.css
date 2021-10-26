@@ -1,21 +1,18 @@
-li>a{
-    color: blanchedalmond;
-    
-}
-li>a:hover{
-    color: rgb(104, 104, 104);
-}
-.itemCount{
-    
-    justify-content: center;
-    color: blanchedalmond;
-    flex-direction: column;
-}
-.counter{
-    justify-content: center;
-    display: flex;
-    border-width: 5px;
-    border-radius: 1px;
-    border-color: black;
+.contenedorContador p{
+    width: 30px;
+    text-align: center;
+    display: inline;
 }
 
+.btn{
+    width: 20px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.btn_activo{
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color: #6d9bf1;
+    border-radius: 5px;
+}

@@ -1,22 +1,25 @@
-import {Modal, Button} from 'react-bootstrap';
-import {useState} from 'react';
+import React,{useEffect,useState} from 'react';
+import axios from 'axios';
+
+//componentes
 import ItemDetail from '../ItemDetail/ItemDetail';
 
-const ItemDetailContainer = (props) =>{
-    const [show, setShow] = useState(false);
-    const handleClose =()=> setShow(false);
-    const handleShow =()=> setShow(true);
+const ItemDetailContainer = ({match}) => {
 
-    return(
-        <>
-        <Button variant='warning' onClick={handleShow} style={{width:'100%'}}>
-            Ver Detalles
-        </Button>
-        <Modal show={show} onHide={handleClose}>
-            <ItemDetail props={props.props}/>
-        </Modal>
-        </>
-    );
-};
+    let detaId = match.params.id;
+    const [detalles,setDetalles]=useState([]);
+    
 
-export default ItemDetailContainer
+    useEffect(()=>{
+        axios(`https://fakestoreapi.com/products/${detaId}`).then(res => {setDetalles(res.data)})
+        
+    },[detaId])
+
+    return (
+        
+        <ItemDetail d={detalles}/>
+    )
+}
+
+export default ItemDetailContainer;
+

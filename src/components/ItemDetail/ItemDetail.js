@@ -1,51 +1,47 @@
-import { Modal, Card, Badge } from 'react-bootstrap';
-import ItemCount from '../ItemCount/ItemCount';
+import React,{useState,useContext} from 'react'
+ import { Card,Image } from 'semantic-ui-react'
+
+ import { Link } from 'react-router-dom';
+ import "./ItemDetail.css";
+ 
+
+ //componentes
+ import ItemCount from '../ItemCount/ItemCount';
 
 
-const ItemDetail = (props) => {
-    const { title, stock, price, id, pictureUrl, description } = props.props;
-    const product = {
-        stock: stock,
-        initial: 1,
-        onAdd: (stock, cantidad) => {
-            alert(`Se agregaron ${cantidad} al carrito.`);
-            return stock - cantidad;
-        },
-        precio: price,
-    };
+ const CardExampleCard = ({d}) =>{ 
+   
+    const [cantProductos,setCantProductos]=useState(0);
+    const [confirmar,setConfirmar] = useState(false)
+    
 
-    return (
-        <>
-            <Modal.Header closeButton>
-                <Modal.Title>{title}</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-                <Card>
-                    <Card.Img variant="top" src={pictureUrl} width='80%' />
-                    <Card.Body>
-                        <Card.Text>
-                            <span style={{ textAlign: 'center' }}>
-                                <Badge bg='success'>SKU:{id}</Badge>
-                            </span>
-                            <br />
-                            <span>{description}</span>
-                            <br />
-                            <span>
-                                <Badge bg='danger'>Precio: ${price}</Badge>
-                            </span>
-                        </Card.Text>
-                        <ItemCount props={product} />
+    const onAdd =(cantidad)=>{
+        setCantProductos(cantidad)
+        setConfirmar(true)
+    }
 
-                    </Card.Body>
-                </Card>
-            </Modal.Body>
+    
+  
+      return(
 
-        </>
-    )
+        <Card className="cardDetail">
+          <Image className="imagenCard" src={d.image} wrapped ui={false} />
+          <Card.Content>
+            <Card.Header className="nombreCard">{d.title}</Card.Header>
+            <Card.Meta>
+              <p>{d.category}</p>
+              <span className='date'>{d.price}</span>
+            </Card.Meta>
+            <Card.Description>
+              {d.description}
+            </Card.Description>
+          </Card.Content>
+              
+          {confirmar? <Link to="/cart"><button class="ui blue button" >Terminar mi compra</button></Link> :<ItemCount stock="5" initial="1" onClick={(cantidad)=>onAdd(cantidad)}/>}
+        </Card>
+ )
+ }
+ export default CardExampleCard
 
 
 
-}
-
-
-export default ItemDetail;

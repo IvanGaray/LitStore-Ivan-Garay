@@ -1,13 +1,15 @@
+
 import "./CartWidget.css";
-import React from 'react'
-import img from '../../assets/carrito.png'
+import img from '../../assets/carrito.png';
 
-const CartWidget = () => {
-    return (
-        <div>
-            <img className='cart' src={img} width='70px' height='50px'/>
+const CartWidget = ()=>{
+
+    return(
+        <div className="contenedor">
+            <img className="imagen" src={img} alt="logoCarrito" />
+            
         </div>
-    )
-}
+    );
 
-export default CartWidget
+};
+export default CartWidget;

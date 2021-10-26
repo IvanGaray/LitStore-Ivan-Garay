@@ -1,8 +1,9 @@
-.ItemListContainer{
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-    color: blanchedalmond;
-    max-height: 400px;
-    
+
+.mensaje{
+    font-size: 40px;
+    text-align: center;
+}
+
+article.card{
+    display: inline-block;
 }

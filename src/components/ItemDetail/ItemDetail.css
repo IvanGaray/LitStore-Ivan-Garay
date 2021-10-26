@@ -1,0 +1,31 @@
+.cardDetail{
+    display: grid;
+    place-items: center;
+    height: 500px;
+    min-width: 100%;
+    
+    
+}
+
+.imagenCard{
+    width: 100px;
+}
+
+.nombreCard{
+    background-color: white;
+    height: 80px;
+}
+
+
+.imagenCard{
+    transition: all .5s ease-in-out;
+    
+   
+    
+    
+  }
+.imagenCard:hover {
+    transform: scale(2.5);
+  
+   
+  }
