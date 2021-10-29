@@ -3,9 +3,9 @@ import React,{useState,useContext} from 'react'
 
  import { Link } from 'react-router-dom';
  import "./ItemDetail.css";
- 
+ import { cartContext } from '../context/CartContext';
 
- //componentes
+ //components
  import ItemCount from '../ItemCount/ItemCount';
 
 
@@ -13,15 +13,19 @@ import React,{useState,useContext} from 'react'
    
     const [cantProductos,setCantProductos]=useState(0);
     const [confirmar,setConfirmar] = useState(false)
+    const {addItem} = useContext(cartContext);
     
-
     const onAdd =(cantidad)=>{
         setCantProductos(cantidad)
         setConfirmar(true)
+        if (cantidad > 0) {
+           addItem(d,cantidad)
+        }
     }
 
-    
-  
+
+
+
       return(
 
         <Card className="cardDetail">
@@ -42,6 +46,10 @@ import React,{useState,useContext} from 'react'
  )
  }
  export default CardExampleCard
+
+
+
+
 
 
 

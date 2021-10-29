@@ -17,11 +17,11 @@ const Item = ({data}) => {
                     <p className="precio">{data.price}</p>
                 </div>
                 <div className="contenedorBoton">
-                    <button class="ui inverted primary button">Agregar</button>
+                <button class="ui inverted primary button">Agregar</button>
                 </div>
     
             </article>   
     )
 }
 
-export default Item;
+export default Item

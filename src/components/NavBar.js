@@ -1,11 +1,11 @@
 import "./NavBar.css";
-import { Navbar, Container, Nav } from "react-bootstrap";
-import logo from '../assets/logo.png'
+
+import logo from '../assets/logos.png';
 import {Image} from 'semantic-ui-react'
 //router
 import { Link } from "react-router-dom";
-//componentes
-import CartWidget from "./CartWidget/CartWidget";
+//components
+import CartWidget from "../components/CartWidget/CartWidget";
 
 
 const NavBar = () => {
@@ -17,9 +17,11 @@ const NavBar = () => {
 
             <div>
                 <ul className="categorias">
-                    <Link to={`/categories/${"Todo"}`}><li> <button class="ui inverted blue button">Todo</button></li></Link>
-                    <Link to={`/categories/${"women's clothing"}`}><li><button class="ui inverted blue button">Ropa</button></li></Link>
+                <Link to={`/categories/${"Todo"}`}><li> <button class="ui inverted blue button">Todo</button></li></Link>
+                    <Link to={`/categories/${"women's clothing"}`}><li><button class="ui inverted blue button">Ropa Mujer</button></li></Link>
+                    <Link to={`/categories/${"men's clothing"}`}><li><button class="ui inverted blue button">Ropa Hombre</button></li></Link>
                     <Link to={`/categories/${"jewelery"}`}><li>  <button class="ui inverted blue button">Accesorios</button></li></Link>
+                    <Link to={`/categories/${"electronics"}`}><li><button class="ui inverted blue button">electronica</button></li></Link>
                     
                 </ul>
             </div>
@@ -37,4 +39,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-

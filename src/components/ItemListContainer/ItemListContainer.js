@@ -1,9 +1,8 @@
 import React from 'react'
 import "./ItemListContainer.css"
 
-//componentes
-import ItemList from "../ItemList/ItemList"
-
+//components
+import ItemList from "./../ItemList/ItemList"
 
 const ItemListContainer = () => {
     return (
@@ -12,5 +11,4 @@ const ItemListContainer = () => {
         </div>
     )
 }
-
 export default ItemListContainer
