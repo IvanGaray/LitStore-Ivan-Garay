@@ -1,0 +1,11 @@
+.cart-icon {
+
+    width: 30px;
+    height: 30px;
+
+    margin: 0px;
+    color: #cd0000;
+}
+.cart-icon:hover {
+        color: rgb(255, 255, 255);
+    }

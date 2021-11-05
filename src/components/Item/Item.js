@@ -1,27 +1,39 @@
-import React from 'react'
+import "./item.css";
+import { Link } from "react-router-dom";
+
+const Item = ({ item }) => {
+ 
+  return (
+       
+    <div id="Item">
+
+      <Link to={"/detail/" + item.id} className="btn-buy">
+        <article className="card">
+
+          <div className="contenedorLogo">
 
 
-//estilos
-import "./Item.css";
+          <img className='logo' src={item.image}/>
 
-const Item = ({data}) => {
-    return (
-            <article className="card">
+          </div>
 
-                <div className="contenedorLogo">
-                    <img className="logo" src={data.image} alt="imagen"/>
-                </div>
+          <div className="contenedorDescripcion">
+            <div class="ui black label small">
+              <p className="nombre">{item.productName}</p></div>
+            
+            <p className="precio ui label">Precio ${item.price}</p>
+            
+            <p className='description'>{item.description}</p>
+            
+            <button className="buy ui inverted primary button">
+              Comprar
+            </button>
+          </div>
+        </article></Link>
 
-                <div className="contenedorDescripcion">
-                    <p className="nombre">{data.title}</p>
-                    <p className="precio">{data.price}</p>
-                </div>
-                <div className="contenedorBoton">
-                <button class="ui inverted primary button">Agregar</button>
-                </div>
-    
-            </article>   
-    )
-}
 
-export default Item
+    </div>
+  );
+};
+
+export default Item;

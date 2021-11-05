@@ -4,8 +4,8 @@ import logo from '../assets/logos.png';
 import {Image} from 'semantic-ui-react'
 //router
 import { Link } from "react-router-dom";
-//components
-import CartWidget from "../components/CartWidget/CartWidget";
+//Components
+import CartWidget from "../Components/CartWidget/CartWidget";
 
 
 const NavBar = () => {

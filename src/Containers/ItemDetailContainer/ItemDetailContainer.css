@@ -1,0 +1,12 @@
+#ItemList{display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-left: 100px
+       ;}
+.itemDetailContainer{
+    width: 100%;
+}
+
+
+
+

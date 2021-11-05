@@ -7,7 +7,7 @@ import "./ItemList.css"
 import { Link } from 'react-router-dom';
 //axios
 import axios from 'axios';
-//components
+//Components
 import Item from '../Item/Item';
 
 const ItemList = () => {

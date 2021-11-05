@@ -16,29 +16,28 @@ const ProductsCart = () => {
                         <article>
                             <div>
                                 <img className="logo" src={i.item.image} alt="imagenItem" />
+                                <br/>
+                                
                             </div>
                             <div>
-
-
-
                                 <table class="ui celled table">
                                     <thead>
                                         <tr><th>Nombre</th>
                                             <th>Precio</th>
                                             <th>cantidad</th>
+                                            <th>descripcion</th>
                                         </tr></thead>
                                     <tbody>
                                         <tr>
                                             <td data-label="Nombre">{i.item.title}</td>
                                             <td data-label="Precio">{i.item.price}</td>
                                             <td data-label="cantidad">{i.cantidad}</td>
+                                            <td data-label="descripcion">{i.description}</td>
                                         </tr>
 
                                     </tbody>
                                 </table>
-                                <p>Nombre:{i.item.title}</p>
-                                <p>Precio:{i.item.price}</p>
-                                <p>cantidad:{i.cantidad}</p>
+                                
                             </div>
                             <div>
                                 <button className="ui secondary button" onClick={() => { eliminarItem(i) }}>Eliminar</button>

@@ -4,10 +4,10 @@ import "./Cart.css"
 
 //router
 import { Link } from 'react-router-dom'
-//components
-import ProductsCart from '../../components/ProductsCart/ProductsCart'
+//Components
+import ProductsCart from '../../Components/ProductsCart/ProductsCart'
 //context
-import { cartContext } from '../../components/context/CartContext'
+import { cartContext } from '../../Components/context/CartContext'
 
 const Carrito = () => {
     const { items, cantidadItems, PrecioTotal, cantidad, borrarTodo } = useContext(cartContext)

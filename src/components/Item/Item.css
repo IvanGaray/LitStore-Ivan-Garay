@@ -2,12 +2,22 @@
 .card{
     width: 300px;
     height: 540px;
-    background-color: #fff;
+    background:rgb(255, 255, 255);
     margin: 20px;
     border-radius: 7px; 
+   
      
     
 }
+
+.card:hover{
+    transform: scale(1.1);
+}
+.card{
+    transition: all .5s ease-in-out;
+}
+
+
 .contenedorLogo{
     width: 300px;
     height: 350px;
@@ -16,18 +26,23 @@
 }
 
 .logo{
-    width: 200px;
+    height: 300px
+;
+    width: 250px
+;
     
 }
 
 .contenedorDescripcion{
     margin: 20px 10px;
     font-size: 15px;
+    display: grid;
     
 }
 
 .contenedorDescripcion .nombre{
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
 
 .contenedorBoton{
@@ -38,4 +53,11 @@
 }
 
 
+.description{
+    color: black;
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
 

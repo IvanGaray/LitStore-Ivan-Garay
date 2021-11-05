@@ -1,31 +1,38 @@
-.cardDetail{
-    display: grid;
-    place-items: center;
+#itemDetailed{
+   
+    
     height: 500px;
-    min-width: 100%;
+    width: 100%;
     
     
 }
 
 .imagenCard{
-    width: 100px;
+    height: 300px
+    ;
+        width: 300px
+    ;
 }
 
 .nombreCard{
-    background-color: white;
-    height: 80px;
+    background-color: inherit;
+    height: 20px;
 }
 
 
-.imagenCard{
-    transition: all .5s ease-in-out;
-    
-   
-    
-    
-  }
-.imagenCard:hover {
-    transform: scale(2.5);
-  
-   
-  }
+
+#images{
+    text-align: center;
+}
+
+.botonera{
+    width: auto;
+    color: blanchedalmond;
+}
+
+.botonera>a{
+    color: blanchedalmond;
+}
+.botonera>a:hover{
+    color: blanchedalmond;
+}

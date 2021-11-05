@@ -1,51 +1,49 @@
-
-import './App.css';
-import { BrowserRouter as Router,Route,Switch } from 'react-router-dom';
-
-//components
-import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
-import Carrito from './Views/cart/Cart';
-import ItemList from "././components/ItemList/ItemList"
-//context
-import {CartProvider} from "./components/context/CartContext"
-
+import React from "react";
+import NavBar from "./Containers/NavBar/NavBar";
+import Home from "./Containers/Home/Home";
+import ItemDetailContainer from "./Containers/ItemDetailContainer/ItemDetailContainer";
+import Cart from "./Components/Cart/Cart";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import {CartProvider} from './Components/Context/CartContext'
+import "./App.css";
+import { AppContext, AppProvider } from "./Components/Context/AppContext";
+import CategoryContainer from "./Containers/CategoryContainer/CategoryContainer";
 
 function App() {
+
   return (
+    <AppProvider>
+    <CartProvider>  
+      <BrowserRouter>
+        {/* NavBar */}
+        <NavBar />
 
-    <div className="App">
+        <Switch>
+          <div className="App">
+            {/* // Start Containers // */}
+            <Route exact path="/">
+              <Home />
+            </Route>
 
-     
-      
+            <Route exact path="/category/:id">
+                <CategoryContainer/>
+            </Route>
 
-      <Router>
-        <CartProvider>
+            <Route exact path="/detail/:id">
+              <ItemDetailContainer />
+            </Route>
 
-          <NavBar/>
+            <Route exact path="/Cart">
+              <Cart />
+            </Route>
 
-          <Switch>
-
-            <Route exact component={ItemList} path="/" />
-            <Route  component={ItemListContainer} path="/Inicio" />
-            <Route  component={ItemList} path="/categories/:categoriaId" />
-            <Route  component={ItemDetailContainer} path="/detail/:id" />
-            <Route  component={Carrito} path="/cart" />
-        
-          </Switch>
-
-        </CartProvider>
-      </Router>
-       
-
-        
-       
-
-        
-        
-        
-    </div>
+            {/* End Containers */}
+          </div>
+        </Switch>
+        {/* Footer */}
+      </BrowserRouter>
+    </CartProvider>  
+    </AppProvider>
   );
 }
 

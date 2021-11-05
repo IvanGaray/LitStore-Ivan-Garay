@@ -1,33 +1,39 @@
-import React,{useState} from 'react';
+import React, { useState } from "react";
+import './ItemCount.css';
 
-//css
-import "./ItemCount.css";
+const ItemCounter = ({ initialValue, maxValue, minValue, onAdd }) => {
+  const [counter, setCounter] = useState(initialValue);
 
-const ItemCount = ({stock,initial,onClick}) => {
+  const decrement = () => {
+    if (counter === minValue) {
+      return alert("El minimo es 1");
+    }
+    setCounter(counter - 1);
+    onAdd(counter - 1);
 
-    const [contador,setContador] = useState(parseInt(initial));
+    console.log(decrement);
+  };
 
-    const incrementar = ()=>{
-        if (contador < stock) {
-            setContador(contador + 1)
-        }  
-    };
-    
-    const desIncrementar = ()=>{
-        if (contador > 0 ) {
-            setContador(contador - 1)
-        }   
-    };
+  const increment = () => {
+    if (counter === maxValue) {
+      return alert("No queda más stock!");
+    }
 
-    return (
-        <div className="contenedorContador">
-            
-        <button className="mini ui negative button" onClick={desIncrementar}>-</button>
-        <div class="mini ui secondary button disable" style={{"padding" : "10px"}}>{contador}</div>
-        
-        <button className="mini ui positive button" onClick={incrementar}>+</button> 
-        <button className="ui inverted green button" onClick={()=>onClick(contador)}>Agregar Carrito</button>
+    setCounter(counter + 1);
+    onAdd(counter + 1);
+  };
+
+  return (
+    <div className="btns-container">
+      <div class="mini ui secondary button disable" style={{"padding" : "10px"}}>{counter}</div>
+     
+      <div className="btns-container">
+        <button onClick={decrement} className="mini ui negative button"> - </button>
+        <button onClick={increment} className="mini ui positive button"> + </button>
+        {/* <button className="btn-buy">Comprar {counter} </button> */}
+      </div>
     </div>
-    )
-}
-export default ItemCount;
+  );
+};
+
+export default ItemCounter;

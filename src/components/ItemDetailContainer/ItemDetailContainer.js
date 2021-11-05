@@ -1,7 +1,7 @@
 import React,{useEffect,useState} from 'react';
 import axios from 'axios';
 
-//components
+//Components
 import ItemDetail from '../ItemDetail/ItemDetail';
 
 const ItemDetailContainer = ({match}) => {
