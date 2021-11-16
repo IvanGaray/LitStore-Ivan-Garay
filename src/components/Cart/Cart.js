@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
-import { CartContext } from "../Context/CartContext";
-import { Formulario } from '../../Components/Form/Form';
+import { CartContext } from "../context/CartContext";
+import { Formulario } from '../../components/Form/Form';
 import { getFirestore } from '../../firebase/index';
 import "./Cart.css";
 

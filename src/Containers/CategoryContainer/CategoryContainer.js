@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Category from "../../Components/Category/Category";
+import Category from "../../components/Category/Category";
 import {getFirestore} from "../../firebase/index";
 
 

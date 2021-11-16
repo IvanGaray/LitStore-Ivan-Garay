@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
 import { Button } from 'react-bootstrap';
 import "./ItemDetail.css";
-import { CartContext } from "../Context/CartContext";
+import { CartContext } from "../context/CartContext";
 
 import { Card, Image,Message,Label } from 'semantic-ui-react'
 

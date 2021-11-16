@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
-import { AppContext } from '../../Components/Context/AppContext';
-import ItemList from "../../Components/ItemsList/ItemList";
+import { AppContext } from '../../components/context/AppContext';
+import ItemList from "../../components/ItemsList/ItemList";
 import "./home.css";
 
 const Home = () => {

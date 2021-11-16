@@ -2,11 +2,11 @@ import React from "react";
 import NavBar from "./Containers/NavBar/NavBar";
 import Home from "./Containers/Home/Home";
 import ItemDetailContainer from "./Containers/ItemDetailContainer/ItemDetailContainer";
-import Cart from "./Components/Cart/Cart";
+import Cart from "./components/Cart/Cart";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import {CartProvider} from './Components/Context/CartContext'
+import {CartProvider} from './components/context/CartContext'
 import "./App.css";
-import { AppContext, AppProvider } from "./Components/Context/AppContext";
+import { AppContext, AppProvider } from "./components/context/AppContext";
 import CategoryContainer from "./Containers/CategoryContainer/CategoryContainer";
 
 function App() {
